@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="15.0" style="-fx-padding: 20;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.carrent.controller.ClientFormController">
+    <Label style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-padding: 0 0 10 0;" text="Новый клиент" />
+
+    <VBox prefWidth="300.0" spacing="10.0">
+        <TextField fx:id="nameField" promptText="ФИО" />
+        <TextField fx:id="phoneField" promptText="Телефон" />
+        <TextField fx:id="passportSeriesField" promptText="Серия паспорта" />
+        <TextField fx:id="passportNumberField" promptText="Номер паспорта" />
+        <DatePicker fx:id="issueDateField" prefHeight="26.0" prefWidth="299.0" promptText="Дата выдачи" />
+        <TextField fx:id="authorityField" promptText="Орган выдачи" />
+    </VBox>
+    
+    <HBox alignment="CENTER" spacing="10.0" style="-fx-padding: 10 0 0 0;">
+        <Button fx:id="cancelButton" maxWidth="Infinity" onAction="#onCancel" style="-fx-background-color: transparent; -fx-text-fill: grey; -fx-border-color: grey; -fx-border-radius: 5; -fx-font-weight: bold;" text="Отмена" HBox.hgrow="ALWAYS" />
+        <Button maxWidth="Infinity" onAction="#onSave" style="-fx-background-color: #333; -fx-text-fill: white; -fx-background-radius: 5; -fx-font-weight: bold;" text="Сохранить" HBox.hgrow="ALWAYS" />
+    </HBox>
+</VBox>

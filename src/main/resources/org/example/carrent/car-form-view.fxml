@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="15.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.carrent.controller.CarFormController" style="-fx-padding: 20;">
+    <Label text="Новый автомобиль" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-padding: 0 0 10 0;"/>
+
+    <VBox spacing="10.0" prefWidth="300.0">
+        <TextField fx:id="plateField" promptText="Госномер (А123АА 77)" />
+        <TextField fx:id="makeField" promptText="Марка" />
+        <TextField fx:id="modelField" promptText="Модель" />
+        <HBox spacing="10.0">
+            <TextField fx:id="colorField" promptText="Цвет" HBox.hgrow="ALWAYS"/>
+            <TextField fx:id="powerField" promptText="Л.С." HBox.hgrow="ALWAYS"/>
+        </HBox>
+        <TextField fx:id="priceField" promptText="Цена руб/сутки" />
+        <TextField fx:id="vinField" promptText="VIN (Серийный номер)" />
+    </VBox>
+    
+    <HBox spacing="10.0" alignment="CENTER" style="-fx-padding: 10 0 0 0;">
+        <Button fx:id="cancelButton" text="Отмена" onAction="#onCancel" maxWidth="Infinity" HBox.hgrow="ALWAYS" style="-fx-background-color: transparent; -fx-text-fill: grey; -fx-border-color: grey; -fx-border-radius: 5; -fx-font-weight: bold;"/>
+        <Button text="Сохранить" onAction="#onSave" maxWidth="Infinity" HBox.hgrow="ALWAYS" style="-fx-background-color: #333; -fx-text-fill: white; -fx-background-radius: 5; -fx-font-weight: bold;"/>
+    </HBox>
+</VBox>
